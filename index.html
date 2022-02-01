@@ -1,27 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-     <title>Title Goes Here</title>
+     <title>Title goes here</title>
   <meta charset="utf-8" />
   <meta name="robots" content="noindex,nofollow" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
+  <style>
+    /* div#play span{
+      background-color: yellow;
+    } */
+  </style>
  </head>
  <body>
      <header>
-     <h1>Title Goes Here</h1>
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="#" target="_blank">Name of project goes here</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
+     <h1>DOM Play</h1>
      </header>
      
    <main class="wrapper">
-  
-       <h2 class="subheader">Title Goes Here</h2>
-        <p>Content goes here</p>
+    <p>This page uses JavaScript to allow a user to click on the name of an actor and highlight their lines in a play. This page uses data-attributes and loops through and an anonymous function to loop through a nodelist and compare data-attributes to highlight or unhighlight text.</p>
+     <div id="play">
+      <h3> <em>Cave of Da Vinci</em></h3>
+      <p>The two burglar men notice Freddy and freeze.</p>
+      <p><span data-actor="freddy">Freddy: Hey, boys…come in, relax.  Grab a seat on the sofa.</span></p>
+      <p>(Freddy sips his coffee)</p>
+      <p><span data-actor="freddy">Freddy:Its okay, the sofa wont bite.</span></p>
+      <p>(both men sit)</p>
+      <p><span data-actor="freddy">Freddy: Do me a favor and take those stupid nylon masks off your face so I can look at you.  What is this the seventies?</span></p>
+      <p>(Freddy laughs)</p>
+      <p><span data-actor="freddy">Freddy: There you are.  (beat)  Coffee, anyone?  A buddy of mine gets it sent to him from Cuba and I must say that the coffee beans from there are impeccable.  Such a smooth taste.  Would you gentlemen like a cup of Cuba?      </span></p>
+      <p><span data-actor="man #1">Man# 1: No thanks.</span></p>
+      <p><span data-actor="freddy">Freddy: Dont be rude.  Introduce yourself first before answering me…this way I know the proper way to address you.</span></p>
+      <p><span data-actor="tobey">Tobey: Tobey.</span></p>
+      <p><span data-actor="freddy">Freddy: No coffee, Tobey?</span></p>
+      <p><span data-actor="tobey">Tobey: Tobey.</span></p>
+      <p><span data-actor="man #2">Man #2: Whats your name?</span></p>
+      <p><span data-actor="freddy">Freddy: My name? Excuse me, Freddy, Freddy Ferrara…</span></p>
+      <p><span data-actor="jack">Jack: Im Jack.</span></p>
+      <p><span data-actor="freddy">Freddy: Nice to me you, Jacky Boy.  Coffee?</span></p>
+      <p><span data-actor="jack">Jack: Sure.</span></p>
+      <p>(Freddy shoots Jack in the forehead and sips his coffee)</p>
+      <p><span data-actor="freddy">Freddy: Tobey, its alright.  These things happen.  Breaking in and entering, its a tricky business.</span></p>
+      <p><span data-actor="tobey">Tobey: Jesus!  Oh God!</span></p>
+      <p><span data-actor="freddy">Freddy: Yes, yes, I know.  Was it your brother?</span></p>
+      <p><span data-actor="tobey">Tobey: Fff, fff, fff—</span></p>
+      <p><span data-actor="freddy">Freddy: Friend.</span></p>
+      <p><span data-actor="tobey">Tobey: Yeah!</span></p>
+      <p><span data-actor="freddy">Freddy: Its okay.  Want a cup of coffee?</span></p>
+      <p><span data-actor="tobey">Tobey: No!  Oh God please no, no coffee.</span></p>
+      <p><span data-actor="freddy">Freddy: Okay, okay.  So, what were you boys doing here?</span></p>
+      <p><span data-actor="tobey">Tobey:  Mmm, mmm, mmoney.</span></p>
+      <p><span data-actor="freddy">Freddy: You came to this dump for money?  Surely you boys could have stepped up the real estate.  There are plenty of neighborhoods just twenty miles east from where were sitting.  That was a mistake, Im afraid.  (beat) Stop looking at him. Hes dead.  Looking at him isnt going to bring him back.  Take that throw blanket and put it over him, if it will help you some.  Go ahead…</span></p>
+      <p>(Tobey is shaking.  He can barely place the blanket over Jack)</p>
+      <p><span data-actor="freddy">Freddy : Ive always been a good judge of character.  Jacky Boy had an attitude straight away and I cant go in for that sort of thing, you know?  Not where I come from.  You, you are much more polite and well mannered.  It goes a very long way with me.</span></p>
+      <p>(Freddy lights up a smoke)</p>
+      <p><span data-actor="freddy">Freddy : Smoke?</span></p>
+      <p><span data-actor="tobey">Tobey: No!  No thank you, sir.</span></p>
+      <p><span data-actor="freddy">Freddy: Dont be over polite cause I dont like that shit either.  Take a cigarette and calm your nerves.</span></p>
+      <p>(Freddy hands him the already lit cigarette and sparks another)</p>
+      <p><span data-actor="freddy">Freddy: Now, you actually did come to the right place. He didnt, but you did.  You looking for work?</span></p>
+      <p><span data-actor="tobey">Tobey: Yes.</span></p>
+      <p><span data-actor="freddy">Freddy: Now, you actually did come to the right place. He didnt, but you did.  You looking for work?</span></p>
+      <p><span data-actor="tobey">Tobey: No.</span></p>
+      <p><span data-actor="freddy">Freddy: You remind me of me when I was your age not too long ago.  I was on the run from the mob because I killed some up and coming thug who would cause me trouble all the time at the night club I worked at and one night I just had enough.  I had to skip town for years until everything was worked out.  But during that time I grew as a person, see, I changed…I had to fend for myself in a new land and mature, figuring out how to survive without my brother Richie having my back all the time.  I was completely on my own.  Ten years.  In that time I became seasoned in my trade and my skills.  I got really good at my shit…sort of like when Da Vinci visited them caves for a time and then suddenly came back with all this knowledge.  You follow?</span></p>
+      <p><span data-actor="tobey">Tobey: I think I do.</span></p>
+      <p><span data-actor="freddy">Freddy: Good.  Your timing couldnt be better, actually.  I want to pay things forward and you actually caught me on a good day.  How is it outside, is it nice out?</span></p>
+      <p><span data-actor="tobey">Tobey: Yeah, the sun is shining.</span></p>
+      <p><span data-actor="freddy">Freddy: Is it?  Thats great to hear cause I usually go out for my morning walk and skipped it this morning.  I dont know why…maybe I sensed you were coming.  Anyway, right, I have some work for you and as of now consider yourself fully employed.  Does that make you happy?</span></p>
+      <p><span data-actor="tobey">Tobey:  Yes.</span></p>
+      <p>(pause.)</p>
+      <p><span data-actor="tobey">Tobey: Can I ask you a question?</span></p>
+      <p><span data-actor="freddy">Freddy: You just did.  Why waste a question asking to ask a question, when you should just ask your question.</span></p>
+      <p><span data-actor="tobey">Tobey: Whats gonna happen to Jack?</span></p>
+      <p><span data-actor="freddy">Freddy: Oh, Jacky Boy, I have plans for Jacky Boy, too.  Im gonna go to the toilet. Ill leave you two alone.  Say your final goodbyes, cry to God and all that.  When I get back I will expect you to be here and I will have instructions.  Very specific instructions that you are to follow exactly.</span></p>
+      <p><span data-actor="tobey">Tobey: Ill be here.</span></p>
+      <p><span data-actor="freddy">Freddy: You should be.</span></p>
+
+
+
+
+
+
+
+
+      
+
+      
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+     </div>
      <footer>
       <p><small>&copy; 2021 by 
           YOUR NAME HERE, All Rights Reserved ~ 
@@ -30,6 +110,7 @@
      </p>
     </footer>
   </main>
-  <script src="js/main.js"></script> 
+  <script src="js/dom-play.js"></script>
+  <script src="js/main.js"></script>
  </body>
 </html>
